@@ -5,7 +5,7 @@ import Pokemon from "../Pokemon/Pokemon";
 
 function PokemonList() {
 
-    const  [pokemonList, setPokemonList] = useState([]);
+    const [pokemonList, setPokemonList] = useState([]);
     const [isLoading , setIsLoading] = useState(true);
     const [pokedexUrl, setPokedexUrl] = useState ('https://pokeapi.co/api/v2/pokemon');
 
@@ -49,7 +49,7 @@ function PokemonList() {
            Pokemon List
            <div className="pokemon-wrapper">
            {(isLoading) ? 'Loading...' :
-                pokemonList.map((p) => <Pokemon name={p.name} image={p.image} key={p.id}/>)
+                pokemonList.map((p) => <Pokemon name={p.name} image={p.image} key={p.id} id={p.id}/>)
            }
            </div>
            <div className="controls">
